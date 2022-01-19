@@ -2,7 +2,7 @@
 
 ## Analyzing the Taleb Barbell portfolio strategy
 
-- [Full Analysis:](/Analysis/analysis.rmd)
+- [Full Analysis:](/Analysis/README.md)
 
 ### Summary:
  
