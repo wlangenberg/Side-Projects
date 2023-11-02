@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+{% endblock %}
+
+{% block header %} <h1>Investments</h1> {% endblock %}
+
+{% block body %}
+<div class="content">
+    <div class="table-container">
+        <h3>Trade History</h3>
+        <table id="trades-table">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Company</th>
+                    <th>Amount</th>
+                    <th>Share Price</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for trade in trades %}
+                <tr>    
+                    <td>{{ trade.type }}</td>
+                    <td>{{ trade.companyname }}</td>
+                    <td>{{ trade.amount }}</td>
+                    <td>{{ trade.shareprice }}</td>
+                    <td>{{ trade.createdat }}</td>
+                </tr>
+                {% endfor %}
+
+                <tr>
+                    <td>Total Spent:</td>
+                    <td colspan="4"><b>{{ totalspent[0].totalspent }} kr</b></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-button-container">
+            <button class="btn-primary">Add Trade</button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
